@@ -20,7 +20,7 @@ exports.checkAccountPayload = async (req, res, next) => {
     if(budget === undefined || name === undefined){
       res.status(400).json({message:"name and budget are required"});
     }else{
-      if(req.body.name)
+     
         name = req.body.name.trim();
       if(name.length<3 || name.length>100){
         res.status(400).json({message:"name of account must be between 3 and 100"});
